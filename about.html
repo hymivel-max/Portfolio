@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>About Adwaith (അദ്വൈത്) — The Prodigy Story & Roots</title>
+  <meta name="description" content="The journey of Adwaith, an 11th grade Plus One student innovator from Thekkumbhagam, Chavara South, Kollam, Kerala (691584).">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { cyberDark: '#07090e', cyberSurface: '#0d121d', emeraldGlow: '#10b981', cyanGlow: '#06b6d4' },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            malayalam: ['"Manjari"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cyberDark text-slate-100">
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
+  <div id="toast-container"></div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 py-3.5 px-4 sm:px-8 border-b border-white/5 bg-cyberDark/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 p-[1.5px]">
+          <div class="w-full h-full bg-[#090d16] rounded-[10px] flex items-center justify-center font-mono font-bold text-emerald-400">A</div>
+        </div>
+        <div>
+          <span class="font-bold tracking-wider text-base gradient-text-emerald">ADWAITH</span>
+          <span class="text-[11px] text-slate-400 font-mono block">Chavara, Kollam 691584</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/60 border border-white/10">
+        <a href="index.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Home</a>
+        <a href="about.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-400 bg-emerald-500/10">About & Story</a>
+        <a href="projects.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Projects</a>
+        <a href="skills.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Skills</a>
+        <a href="contact.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button onclick="window.openTerminal()" class="px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
+          <i data-lucide="terminal" class="w-3.5 h-3.5 inline"></i> CLI
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="min-h-screen pt-32 pb-24 px-4 sm:px-8 relative z-20">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <span class="badge-pill badge-emerald mb-3">Biography & Evolution</span>
+        <h1 class="text-4xl sm:text-6xl font-black mb-4">
+          The Journey of <span class="gradient-text-emerald">Adwaith</span>
+        </h1>
+        <div class="malayalam-sub text-lg sm:text-xl font-bold text-emerald-300 mb-4">
+          അദ്വൈത് • തെക്കുംഭാഗം, ചവറ സൗത്ത്, കൊല്ലം (691584)
+        </div>
+        <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+          From tinkering with Minecraft shader matrices to creating Kerala's first WebGL open-world village engine and 
+          empowering AI models with Blender 3D automation.
+        </p>
+      </div>
+
+      <!-- Story Detailed Sections -->
+      <div class="space-y-12">
+        
+        <!-- Chapter 1 -->
+        <div class="glass-card p-8 rounded-3xl" data-tilt data-tilt-max="5">
+          <div class="glare-effect"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="badge-pill badge-emerald">Chapter I</span>
+            <h3 class="text-2xl font-bold text-white">Roots in Chavara South, Kollam</h3>
+          </div>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+            Growing up in <strong>Thekkumbhagam, Chavara South (Kollam, Kerala 691584)</strong>, surrounded by the tranquil 
+            waters of Ashtamudi and coastal Kerala landscapes, I discovered computing not merely as a hobby, but as a digital canvas. 
+            While most high school students were focused solely on textbooks, I was fascinated by how computer graphics work under the hood.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            I began by modifying Minecraft shaders, experimenting with real-time lighting math, writing GLSL fragment shaders, 
+            and hosting custom game servers. That laid the bedrock for high-performance systems thinking.
+          </p>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="glass-card p-8 rounded-3xl" data-tilt data-tilt-max="5">
+          <div class="glare-effect"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="badge-pill badge-cyan">Chapter II</span>
+            <h3 class="text-2xl font-bold text-white">Full-Stack Cloud & Mobile Architecture</h3>
+          </div>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+            Next, I transitioned into full-stack engineering. I built <strong>Pacha.leaf</strong>, a comprehensive botanical 
+            commerce ecosystem with Express 5, JWT authentication, and automated GitHub Actions CI/CD pipelines.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Using Capacitor 8, I packaged cross-platform mobile apps for Android and iOS, handling native permission systems, 
+            session management, and cloud deployments on Vercel.
+          </p>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="glass-card p-8 rounded-3xl" data-tilt data-tilt-max="5">
+          <div class="glare-effect"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="badge-pill badge-violet">Chapter III</span>
+            <h3 class="text-2xl font-bold text-white">Malayalam Open World 3D & AI Pipelines</h3>
+          </div>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+            Today in Plus One (+1), I am actively developing <strong>Malayalam Open World 3D</strong> — an interactive 3D 
+            game built right in the browser using Three.js and WebGL. It captures the authentic aesthetic of rural Kerala, 
+            complete with traditional tea shops ("Chayakada"), character sword rigging, and responsive physics.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Alongside this, I authored the <strong>Antigravity Blender MCP</strong> server, connecting AI agents directly with 
+            Blender 3D to automate procedural modeling, scene illumination, and snapshot rendering.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Quick Back Nav -->
+      <div class="mt-14 text-center">
+        <a href="projects.html" class="cyber-btn cyber-btn-primary">
+          <span>Explore All Projects</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Shared Terminal Modal -->
+  <div id="terminal-modal" class="modal-overlay">
+    <div class="modal-content !max-w-3xl p-0 border border-emerald-500/40">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <div class="terminal-dot terminal-dot-red" onclick="window.closeTerminal()"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="text-xs font-mono text-emerald-300 font-semibold flex items-center gap-1.5">
+          <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+          <span>adwaith@kollam-core:~$ (Live CLI Shell)</span>
+        </div>
+        <button id="terminal-close-btn" class="text-slate-400 hover:text-white text-xs font-mono px-2 py-0.5 rounded bg-white/5">ESC</button>
+      </div>
+      <div class="terminal-body" id="terminal-history"></div>
+      <div class="p-3 bg-black/60 border-t border-white/10 flex items-center gap-2">
+        <span class="terminal-prompt text-xs">adwaith@kollam-core:~$</span>
+        <input type="text" id="terminal-cli-input" class="terminal-input !w-full text-xs font-mono" placeholder="type 'help'...">
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+  <script src="js/audio-sfx.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>

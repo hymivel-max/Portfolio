@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Contact & Roots — ADWAITH (അദ്വൈത്)</title>
+  <meta name="description" content="Get in touch with Adwaith, based in Thekkumbhagam, Chavara South, Kollam, Kerala, India (691584).">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { cyberDark: '#07090e', cyberSurface: '#0d121d', emeraldGlow: '#10b981', cyanGlow: '#06b6d4' },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            malayalam: ['"Manjari"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cyberDark text-slate-100">
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
+  <div id="toast-container"></div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 py-3.5 px-4 sm:px-8 border-b border-white/5 bg-cyberDark/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 p-[1.5px]">
+          <div class="w-full h-full bg-[#090d16] rounded-[10px] flex items-center justify-center font-mono font-bold text-emerald-400">A</div>
+        </div>
+        <div>
+          <span class="font-bold tracking-wider text-base gradient-text-emerald">ADWAITH</span>
+          <span class="text-[11px] text-slate-400 font-mono block">Chavara, Kollam 691584</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/60 border border-white/10">
+        <a href="index.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Home</a>
+        <a href="about.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">About & Story</a>
+        <a href="projects.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Projects</a>
+        <a href="skills.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Skills</a>
+        <a href="contact.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-400 bg-emerald-500/10">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button onclick="window.openTerminal()" class="px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
+          <i data-lucide="terminal" class="w-3.5 h-3.5 inline"></i> CLI
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact & Roots Main -->
+  <main class="min-h-screen pt-32 pb-24 px-4 sm:px-8 relative z-20">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <span class="badge-pill badge-emerald mb-3">Direct Node Reachout</span>
+        <h1 class="text-4xl sm:text-6xl font-black mb-4">
+          Contact & <span class="gradient-text-emerald">Location</span>
+        </h1>
+        <div class="malayalam-sub text-lg sm:text-xl font-bold text-emerald-300 mb-4">
+          തെക്കുംഭാഗം • ചവറ സൗത്ത് • കൊല്ലം • പിൻകോഡ്: 691584
+        </div>
+        <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+          Whether you want to collaborate on 3D game engines, explore AI plugins, or discuss software engineering, reach out anytime.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Quick Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <div class="glass-card p-5 rounded-2xl flex items-center justify-between" data-tilt data-tilt-max="5">
+            <div class="glare-effect"></div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 font-mono block">Direct Email</span>
+                <span class="text-sm font-bold text-white select-all">hymivel@gmail.com</span>
+              </div>
+            </div>
+            <button data-copy="hymivel@gmail.com" data-copy-label="Email hymivel@gmail.com copied!" class="p-2.5 rounded-lg bg-slate-900 border border-white/10 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl flex items-center justify-between" data-tilt data-tilt-max="5">
+            <div class="glare-effect"></div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <i data-lucide="github" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 font-mono block">GitHub</span>
+                <span class="text-sm font-bold text-white">github.com/hymivel-max</span>
+              </div>
+            </div>
+            <a href="https://github.com/hymivel-max" target="_blank" class="p-2.5 rounded-lg bg-slate-900 border border-white/10 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl" data-tilt data-tilt-max="5">
+            <div class="glare-effect"></div>
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-amber-400 font-mono uppercase tracking-wider block font-semibold">Address & Post</span>
+                <h4 class="text-base font-bold text-white">Thekkumbhagam, Chavara South</h4>
+                <p class="text-xs text-slate-300 mt-1">Kollam, Kerala, India — PIN: 691584</p>
+              </div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-white/5 text-xs text-slate-300 space-y-1 font-mono">
+              <div class="flex justify-between">
+                <span class="text-slate-400">Coordinates:</span>
+                <span class="text-emerald-400">8.9959° N, 76.5367° E</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">State / Region:</span>
+                <span class="text-white">Kerala (God's Own Country)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Message Form -->
+        <div class="lg:col-span-7 glass-card p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-white mb-1">Direct Transmission Form</h3>
+          <p class="text-xs text-slate-400 mb-6">Dispatches an instant email to hymivel@gmail.com.</p>
+
+          <form id="contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="form-name" class="block text-xs font-mono text-slate-300 mb-1.5">Name</label>
+                <input type="text" id="form-name" required placeholder="Your name" class="w-full px-4 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white text-xs sm:text-sm focus:border-emerald-500 focus:outline-none">
+              </div>
+              <div>
+                <label for="form-email" class="block text-xs font-mono text-slate-300 mb-1.5">Email</label>
+                <input type="email" id="form-email" required placeholder="your.email@domain.com" class="w-full px-4 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white text-xs sm:text-sm focus:border-emerald-500 focus:outline-none">
+              </div>
+            </div>
+            <div>
+              <label for="form-message" class="block text-xs font-mono text-slate-300 mb-1.5">Message</label>
+              <textarea id="form-message" rows="5" required placeholder="What are you working on or want to discuss?" class="w-full px-4 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white text-xs sm:text-sm focus:border-emerald-500 focus:outline-none"></textarea>
+            </div>
+            <button type="submit" class="cyber-btn cyber-btn-primary w-full !py-3">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Transmit Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script>lucide.createIcons();</script>
+  <script src="js/audio-sfx.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

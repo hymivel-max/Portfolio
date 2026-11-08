@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Skills Matrix & Tech Stack — ADWAITH (അദ്വൈത്)</title>
+  <meta name="description" content="Technical proficiencies and tools mastered by Adwaith: Three.js, WebGL, GLSL, Blender bpy, Node.js, Capacitor 8, and CI/CD pipelines.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { cyberDark: '#07090e', cyberSurface: '#0d121d', emeraldGlow: '#10b981', cyanGlow: '#06b6d4' },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            malayalam: ['"Manjari"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cyberDark text-slate-100">
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
+  <div id="toast-container"></div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 py-3.5 px-4 sm:px-8 border-b border-white/5 bg-cyberDark/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 p-[1.5px]">
+          <div class="w-full h-full bg-[#090d16] rounded-[10px] flex items-center justify-center font-mono font-bold text-emerald-400">A</div>
+        </div>
+        <div>
+          <span class="font-bold tracking-wider text-base gradient-text-emerald">ADWAITH</span>
+          <span class="text-[11px] text-slate-400 font-mono block">Chavara, Kollam 691584</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/60 border border-white/10">
+        <a href="index.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Home</a>
+        <a href="about.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">About & Story</a>
+        <a href="projects.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Projects</a>
+        <a href="skills.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-400 bg-emerald-500/10">Skills</a>
+        <a href="contact.html" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-emerald-400">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button onclick="window.openTerminal()" class="px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
+          <i data-lucide="terminal" class="w-3.5 h-3.5 inline"></i> CLI
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Skills Matrix Main -->
+  <main class="min-h-screen pt-32 pb-24 px-4 sm:px-8 relative z-20">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <span class="badge-pill badge-violet mb-3">Architectural Capabilities</span>
+        <h1 class="text-4xl sm:text-6xl font-black mb-4">
+          Skills & <span class="gradient-text-emerald">Tech Matrix</span>
+        </h1>
+        <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+          A breakdown of languages, graphics engines, game systems, and development tools honed across years of hands-on engineering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Section 1 -->
+        <div class="glass-card p-8 rounded-3xl" data-tilt data-tilt-max="5">
+          <div class="glare-effect"></div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <i data-lucide="terminal" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Programming Languages</h3>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">JavaScript / TypeScript</span>
+                <span class="text-emerald-400">Expert • 95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-500 rounded-full" style="width: 95%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Full-stack web apps, Three.js shaders, Node.js event engines.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Python 3</span>
+                <span class="text-emerald-400">Advanced • 90%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-500 rounded-full" style="width: 90%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Blender bpy automation, Model Context Protocol servers, script tooling.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">GLSL / Shader Mathematics</span>
+                <span class="text-cyan-400">Proficient • 85%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-500 rounded-full" style="width: 85%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Fragment & vertex shaders, lighting math, BSL Minecraft shaders.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Lua & C++ Systems</span>
+                <span class="text-violet-400">Proficient • 80%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-500 rounded-full" style="width: 80%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">FiveM multiplayer game scripts, low-level packaging, systems integration.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="glass-card p-8 rounded-3xl" data-tilt data-tilt-max="5">
+          <div class="glare-effect"></div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="box" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">3D, WebGL & Games</h3>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Three.js & WebGL Engine</span>
+                <span class="text-cyan-400">Mastery • 92%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-500 rounded-full" style="width: 92%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Scene graphs, procedural geometry, custom lighting, camera physics.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Blender 3D & Rigging</span>
+                <span class="text-cyan-400">Advanced • 88%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-500 rounded-full" style="width: 88%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Armature bones, skinning, weights, procedural textures, GLTF export.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">FiveM Multiplayer Architecture</span>
+                <span class="text-emerald-400">Advanced • 85%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-500 rounded-full" style="width: 85%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Server event sync, entity spawning, vehicle physics, custom UI overlays.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Real-Time Character Physics</span>
+                <span class="text-violet-400">Proficient • 82%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-500 rounded-full" style="width: 82%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Inverse kinematics, joint constraints, collision boundaries.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="glass-card p-8 rounded-3xl" data-tilt data-tilt-max="5">
+          <div class="glare-effect"></div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Full-Stack & Mobile</h3>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Node.js 22 & Express 5</span>
+                <span class="text-violet-400">Mastery • 94%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-500 rounded-full" style="width: 94%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">REST APIs, middleware security, JWT authentication, cookie sessions.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Capacitor 8 (Android & iOS)</span>
+                <span class="text-violet-400">Advanced • 90%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-500 rounded-full" style="width: 90%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Cross-platform native mobile shells, automated Gradle builds.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Tailwind CSS & Responsive UI</span>
+                <span class="text-cyan-400">Expert • 95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-500 rounded-full" style="width: 95%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Glassmorphism, dark cyberpunk themes, micro-animations, mobile drawer UX.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="glass-card p-8 rounded-3xl" data-tilt data-tilt-max="5">
+          <div class="glare-effect"></div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">DevOps & Media Suite</h3>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">GitHub Actions CI/CD</span>
+                <span class="text-amber-400">Advanced • 88%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-amber-500 rounded-full" style="width: 88%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Automated mobile build runners, Node 22 CI workflows, auto releases.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">Adobe Premiere Pro Automation</span>
+                <span class="text-amber-400">Advanced • 85%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-amber-500 rounded-full" style="width: 85%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">ExtendScript automation, batch rendering, sequence cuts, audio ducking.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-200">OBS Streaming & Overlays</span>
+                <span class="text-emerald-400">Advanced • 90%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-500 rounded-full" style="width: 90%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Real-time YouTube livechat overlays, alert webhooks, dynamic graphics.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-14 text-center">
+        <a href="contact.html" class="cyber-btn cyber-btn-primary">
+          <span>Connect with Adwaith</span>
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Terminal Modal -->
+  <div id="terminal-modal" class="modal-overlay">
+    <div class="modal-content !max-w-3xl p-0 border border-emerald-500/40">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <div class="terminal-dot terminal-dot-red" onclick="window.closeTerminal()"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="text-xs font-mono text-emerald-300 font-semibold flex items-center gap-1.5">
+          <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+          <span>adwaith@kollam-core:~$ (Live CLI Shell)</span>
+        </div>
+        <button id="terminal-close-btn" class="text-slate-400 hover:text-white text-xs font-mono px-2 py-0.5 rounded bg-white/5">ESC</button>
+      </div>
+      <div class="terminal-body" id="terminal-history"></div>
+      <div class="p-3 bg-black/60 border-t border-white/10 flex items-center gap-2">
+        <span class="terminal-prompt text-xs">adwaith@kollam-core:~$</span>
+        <input type="text" id="terminal-cli-input" class="terminal-input !w-full text-xs font-mono" placeholder="type 'help'...">
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+  <script src="js/audio-sfx.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>
